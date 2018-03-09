@@ -26,5 +26,15 @@ namespace TrackerUI
         {
 
         }
+
+        private void prizesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteSelectedPrizeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

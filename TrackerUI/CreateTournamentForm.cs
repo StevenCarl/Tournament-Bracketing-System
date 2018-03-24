@@ -7,34 +7,189 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
-    public partial class selectTeamLabel : Form
+    public partial class CreateTournamentForm : Form, IPrizeRequester, ITeamRequester
     {
-        public selectTeamLabel()
+        int teamCheck = 0;
+        int prizeCheck = 0;
+        List<TeamModel> availableTeams = GlobalConfig.Connection.GetTeam_All();
+        List<TeamModel> selectedTeams = new List<TeamModel>();
+        List<PrizeModel> selectedPrizes = new List<PrizeModel>();
+
+        public CreateTournamentForm()
         {
             InitializeComponent();
+
+            WireUpLists();
         }
 
-        private void CreateTournamentForm_Load(object sender, EventArgs e)
+        private void WireUpLists()
+        {
+            selectTeamDropDown.DataSource = null;
+            selectTeamDropDown.DataSource = availableTeams;
+            selectTeamDropDown.DisplayMember = "TeamName";
+
+            tournamentTeamsListBox.DataSource = null;
+            tournamentTeamsListBox.DataSource = selectedTeams;
+            tournamentTeamsListBox.DisplayMember = "TeamName";
+
+            prizesListBox.DataSource = null;
+            prizesListBox.DataSource = selectedPrizes;
+            prizesListBox.DisplayMember = "PlaceName";
+        }
+
+        private void addTeamButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = (TeamModel)selectTeamDropDown.SelectedItem;
+
+            if (t != null)
+            {
+                availableTeams.Remove(t);
+                selectedTeams.Add(t);
+                teamCheck++;
+
+                WireUpLists();
+            }
+        }
+
+        private void createPrizeButton_Click(object sender, EventArgs e)
+        {
+            // Call the CreatePrizeForm
+            CreatePrizeForm frm = new CreatePrizeForm(this);
+            frm.Show();
+        }
+
+        public void PrizeComplete(PrizeModel model)
+        {
+            // Get back from the form a PrizeModel
+            // Take the PrizeModel and put it into our list of selected prizes
+            selectedPrizes.Add(model);
+            prizeCheck++;
+            WireUpLists();
+        }
+
+        public void TeamComplete(TeamModel model)
+        {
+            selectedTeams.Add(model);
+            teamCheck++;
+            WireUpLists();
+        }
+
+        private void createNewTeamLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateTeamForm frm = new CreateTeamForm(this);
+            frm.Show();
+        }
+
+        private void removeSelectedPlayerButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = (TeamModel)tournamentTeamsListBox.SelectedItem;
+
+            if (t != null)
+            {
+                selectedTeams.Remove(t);
+                availableTeams.Add(t);
+                teamCheck--;
+                WireUpLists();
+            }
+        }
+
+        private void removeSelectedPrizeButton_Click(object sender, EventArgs e)
+        {
+            PrizeModel p = (PrizeModel)prizesListBox.SelectedItem;
+
+            if (p != null)
+            {
+                selectedPrizes.Remove(p);
+                prizeCheck--;
+                WireUpLists();
+            }
+        }
+
+        private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+            // Validate data
+            decimal fee = 0;
+
+            // Data validation for Tournament name, checks if input is empty
+            if (tournamentNameValue.Text == null || tournamentNameValue.Text == "")
+            {
+                MessageBox.Show("Tournament Name should not be empty!",
+                    "Invalid Tournament Name",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            // Data validation for Entry fee, checks if input is empty or entry fee is not a decimal
+            bool feeAcceptable = decimal.TryParse(entryFeeValue.Text, out fee);
+
+            if (!feeAcceptable || entryFeeValue.Text == null)
+            {
+                MessageBox.Show("You need to enter a valid Entry Fee.", 
+                    "Invalid Fee", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+                return;
+            }
+            
+            // Create our tournament model
+            TournamentModel tm = new TournamentModel();
+            tm.TournamentName = tournamentNameValue.Text;
+
+           
+            tm.EntryFee = fee;
+
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
+        
+            if (teamCheck == 0)
+            {
+                MessageBox.Show("Teams should not be empty!",
+                   "Empty Teams",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+                return;
+            }
+
+            if (teamCheck <= 1)
+            {
+                MessageBox.Show("There should be at least two teams to compete!",
+                   "Minimum Number of Teams Not Reached",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+                return;
+            }
+
+            // Wire our matchups
+            TournamentLogic.CreateRounds(tm);
+
+            // Create Tournament entry
+            // Create all of the prizes entries
+            // Create all of team entries
+            GlobalConfig.Connection.CreateTournament(tm);
+
+            //tm.AlertUsersToNewRound();
+
+            TournamentViewerForm frm = new TournamentViewerForm(tm);
+            frm.Show();
+            this.Close();
+        }
+
+        private void tournamentNameValue_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void headerLabel_Click(object sender, EventArgs e)
+        private void homeButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void prizesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteSelectedPrizeButton_Click(object sender, EventArgs e)
-        {
-
+            TournamentDashboardForm frm = new TournamentDashboardForm();
+            frm.Show();
+            this.Hide();
         }
     }
 }

@@ -47,8 +47,6 @@
             this.prizesListBox = new System.Windows.Forms.ListBox();
             this.createTournamentButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +56,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(79, 27);
+            this.headerLabel.Location = new System.Drawing.Point(341, 27);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(317, 50);
             this.headerLabel.TabIndex = 1;
@@ -66,7 +64,6 @@
             // 
             // tournamentNameValue
             // 
-            this.tournamentNameValue.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tournamentNameValue.Location = new System.Drawing.Point(46, 154);
             this.tournamentNameValue.Name = "tournamentNameValue";
             this.tournamentNameValue.Size = new System.Drawing.Size(329, 35);
@@ -86,7 +83,6 @@
             // 
             // entryFeeValue
             // 
-            this.entryFeeValue.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryFeeValue.Location = new System.Drawing.Point(175, 217);
             this.entryFeeValue.Name = "entryFeeValue";
             this.entryFeeValue.Size = new System.Drawing.Size(111, 35);
@@ -106,7 +102,6 @@
             // 
             // selectTeamDropDown
             // 
-            this.selectTeamDropDown.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectTeamDropDown.FormattingEnabled = true;
             this.selectTeamDropDown.Location = new System.Drawing.Point(46, 324);
             this.selectTeamDropDown.Name = "selectTeamDropDown";
@@ -127,10 +122,9 @@
             // createNewTeamLink
             // 
             this.createNewTeamLink.AutoSize = true;
-            this.createNewTeamLink.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createNewTeamLink.Location = new System.Drawing.Point(252, 290);
             this.createNewTeamLink.Name = "createNewTeamLink";
-            this.createNewTeamLink.Size = new System.Drawing.Size(109, 30);
+            this.createNewTeamLink.Size = new System.Drawing.Size(114, 30);
             this.createNewTeamLink.TabIndex = 15;
             this.createNewTeamLink.TabStop = true;
             this.createNewTeamLink.Text = "create new";
@@ -225,7 +219,6 @@
             // prizesLabel
             // 
             this.prizesLabel.AutoSize = true;
-            this.prizesLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prizesLabel.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prizesLabel.ForeColor = System.Drawing.Color.Black;
             this.prizesLabel.Location = new System.Drawing.Point(480, 324);
@@ -263,51 +256,22 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.minimizeButton);
-            this.panel1.Controls.Add(this.closeButton);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-21, -9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1048, 97);
+            this.panel1.Size = new System.Drawing.Size(1011, 100);
             this.panel1.TabIndex = 28;
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(858, 27);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(67, 63);
-            this.minimizeButton.TabIndex = 17;
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Image = global::TrackerUI.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(921, 27);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(67, 63);
-            this.closeButton.TabIndex = 16;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // homeButton
             // 
-            this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Image = global::TrackerUI.Properties.Resources.home;
-            this.homeButton.Location = new System.Drawing.Point(879, 561);
+            this.homeButton.Location = new System.Drawing.Point(798, 541);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(74, 77);
+            this.homeButton.Size = new System.Drawing.Size(155, 77);
             this.homeButton.TabIndex = 30;
+            this.homeButton.Text = "Back to Home";
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
@@ -318,6 +282,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(992, 650);
             this.Controls.Add(this.homeButton);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.createTournamentButton);
             this.Controls.Add(this.removeSelectedPrizeButton);
             this.Controls.Add(this.prizesLabel);
@@ -334,13 +299,10 @@
             this.Controls.Add(this.entryFeeLabel);
             this.Controls.Add(this.tournamentNameValue);
             this.Controls.Add(this.tournamentNameLabel);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "CreateTournamentForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Tournament";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -370,7 +332,5 @@
         private System.Windows.Forms.Button createTournamentButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Button closeButton;
     }
 }

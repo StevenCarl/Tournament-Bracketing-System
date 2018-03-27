@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrackerLibrary;
 using TrackerLibrary.Models;
-using System.Runtime.InteropServices;
 
 namespace TrackerUI
 {
@@ -109,7 +108,7 @@ namespace TrackerUI
 
         private void LoadMatchup(MatchupModel m)
         {
-            //string output = "";
+            string output = "";
             try
             {
                 for (int i = 0; i < m.Entries.Count; i++)
@@ -148,7 +147,7 @@ namespace TrackerUI
             }
             catch
             {
-                //output = "Error";
+                output = "Error";
             }
            
         }
@@ -268,16 +267,6 @@ namespace TrackerUI
             TournamentDashboardForm frm = new TournamentDashboardForm();
             frm.Show();
             this.Hide();
-        }
-
-        private void minimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

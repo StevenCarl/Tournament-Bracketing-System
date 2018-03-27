@@ -66,11 +66,6 @@
     </Compile>
     <Compile Include="IPrizeRequester.cs" />
     <Compile Include="ITeamRequester.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="TournamentDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +91,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TournamentDashboardForm.resx">
       <DependentUpon>TournamentDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,60 +122,6 @@
       <Project>{6dedd580-6689-415d-b797-cb9d9d39985e}</Project>
       <Name>TrackerLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\000322653W.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\000322653W1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\000322653W2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loadTournament.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\load.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\load-tournament1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background-image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background-image1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\load-tournament.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

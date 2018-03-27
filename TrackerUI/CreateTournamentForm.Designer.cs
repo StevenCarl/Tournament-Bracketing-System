@@ -47,9 +47,9 @@
             this.prizesListBox = new System.Windows.Forms.ListBox();
             this.createTournamentButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.homeButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.homeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -263,7 +263,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.panel1.Controls.Add(this.minimizeButton);
             this.panel1.Controls.Add(this.closeButton);
             this.panel1.Controls.Add(this.headerLabel);
@@ -272,32 +272,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1048, 97);
             this.panel1.TabIndex = 28;
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(858, 27);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(67, 63);
-            this.minimizeButton.TabIndex = 17;
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Image = global::TrackerUI.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(921, 27);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(67, 63);
-            this.closeButton.TabIndex = 16;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // homeButton
             // 
@@ -310,6 +284,32 @@
             this.homeButton.TabIndex = 30;
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize3;
+            this.minimizeButton.Location = new System.Drawing.Point(858, 27);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(67, 63);
+            this.minimizeButton.TabIndex = 17;
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::TrackerUI.Properties.Resources.close3;
+            this.closeButton.Location = new System.Drawing.Point(921, 27);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(67, 63);
+            this.closeButton.TabIndex = 16;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // CreateTournamentForm
             // 

@@ -276,7 +276,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.panel1.Controls.Add(this.minimizeButton);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Controls.Add(this.closeButton);
@@ -304,7 +304,7 @@
             this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeButton.Image")));
+            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize2;
             this.minimizeButton.Location = new System.Drawing.Point(881, 12);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(67, 63);
@@ -317,7 +317,7 @@
             this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
+            this.closeButton.Image = global::TrackerUI.Properties.Resources.close2;
             this.closeButton.Location = new System.Drawing.Point(943, 12);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(67, 63);

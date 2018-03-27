@@ -33,11 +33,11 @@
             this.loadExistingTournamentDropDown = new System.Windows.Forms.ComboBox();
             this.loadExistingTournamentLabel = new System.Windows.Forms.Label();
             this.tournamentDashboardPanel = new System.Windows.Forms.Panel();
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.createTournamentButton = new System.Windows.Forms.Button();
             this.loadTournamentButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.tournamentDashboardPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             // tournamentDashboardPanel
             // 
-            this.tournamentDashboardPanel.BackColor = System.Drawing.Color.Black;
+            this.tournamentDashboardPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.tournamentDashboardPanel.Controls.Add(this.minimizeButton);
             this.tournamentDashboardPanel.Controls.Add(this.closeButton);
             this.tournamentDashboardPanel.Controls.Add(this.headerLabel);
@@ -87,32 +87,6 @@
             this.tournamentDashboardPanel.Size = new System.Drawing.Size(636, 77);
             this.tournamentDashboardPanel.TabIndex = 28;
             this.tournamentDashboardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tournamentDashboardPanel_Paint);
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(490, 3);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(67, 63);
-            this.minimizeButton.TabIndex = 15;
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Image = global::TrackerUI.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(552, 3);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(67, 63);
-            this.closeButton.TabIndex = 14;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -164,6 +138,32 @@
             this.loadTournamentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.loadTournamentButton.UseVisualStyleBackColor = false;
             this.loadTournamentButton.Click += new System.EventHandler(this.loadTournamentButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Image = global::TrackerUI.Properties.Resources.minimize4;
+            this.minimizeButton.Location = new System.Drawing.Point(490, 3);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(67, 63);
+            this.minimizeButton.TabIndex = 15;
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::TrackerUI.Properties.Resources.close4;
+            this.closeButton.Location = new System.Drawing.Point(552, 3);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(67, 63);
+            this.closeButton.TabIndex = 14;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // TournamentDashboardForm
             // 

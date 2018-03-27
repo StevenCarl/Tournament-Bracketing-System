@@ -181,5 +181,27 @@ namespace TrackerUI
         {
 
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            TournamentDashboardForm frm = new TournamentDashboardForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
     }
 }

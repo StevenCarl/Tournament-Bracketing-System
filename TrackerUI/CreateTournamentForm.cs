@@ -61,6 +61,8 @@ namespace TrackerUI
             // Call the CreatePrizeForm
             CreatePrizeForm frm = new CreatePrizeForm(this);
             frm.Show();
+
+           
         }
 
         public void PrizeComplete(PrizeModel model)
@@ -130,23 +132,23 @@ namespace TrackerUI
 
             if (!feeAcceptable || entryFeeValue.Text == null)
             {
-                MessageBox.Show("You need to enter a valid Entry Fee.", 
-                    "Invalid Fee", 
-                    MessageBoxButtons.OK, 
+                MessageBox.Show("You need to enter a valid Entry Fee.",
+                    "Invalid Fee",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
             }
-            
+
             // Create our tournament model
             TournamentModel tm = new TournamentModel();
             tm.TournamentName = tournamentNameValue.Text;
 
-           
+
             tm.EntryFee = fee;
 
             tm.Prizes = selectedPrizes;
             tm.EnteredTeams = selectedTeams;
-        
+
             if (teamCheck == 0)
             {
                 MessageBox.Show("Teams should not be empty!",
@@ -191,5 +193,16 @@ namespace TrackerUI
             frm.Show();
             this.Hide();
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+  
     }
 }

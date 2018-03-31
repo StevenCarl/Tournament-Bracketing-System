@@ -279,5 +279,17 @@ namespace TrackerUI
         {
             Application.Exit();
         }
+
+        private void viewTournamentRecordsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void viewTournamentRecordsButton_Click(object sender, EventArgs e)
+        //{
+        //    TournamentRecordsForm frm = new TournamentRecordsForm();
+        //    frm.Show();
+
+        //}
     }
 }

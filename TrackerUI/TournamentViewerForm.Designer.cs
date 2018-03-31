@@ -47,6 +47,7 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
+            this.viewTournamentRecordsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,12 +257,29 @@
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
+            // viewTournamentRecordsButton
+            // 
+            this.viewTournamentRecordsButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.viewTournamentRecordsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.viewTournamentRecordsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.viewTournamentRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewTournamentRecordsButton.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewTournamentRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.viewTournamentRecordsButton.Location = new System.Drawing.Point(496, 111);
+            this.viewTournamentRecordsButton.Name = "viewTournamentRecordsButton";
+            this.viewTournamentRecordsButton.Size = new System.Drawing.Size(293, 61);
+            this.viewTournamentRecordsButton.TabIndex = 30;
+            this.viewTournamentRecordsButton.Text = "View Tournament Records";
+            this.viewTournamentRecordsButton.UseVisualStyleBackColor = true;
+            this.viewTournamentRecordsButton.Click += new System.EventHandler(this.viewTournamentRecordsButton_Click);
+            // 
             // TournamentViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(801, 527);
+            this.Controls.Add(this.viewTournamentRecordsButton);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.scoreButton);
@@ -310,6 +328,7 @@
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button viewTournamentRecordsButton;
     }
 }
 
